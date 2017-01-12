@@ -1,0 +1,122 @@
+/*-------------------------------------------------------------------------------------------*/
+/* TABS: Vertical   */
+/*-------------------------------------------------------------------------------------------*/
+#example-vert-tabs li {
+	width: 100%;
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* CUSTOM TABS: Custom deep linking tabs animation using animation (variables):   */
+/*-------------------------------------------------------------------------------------------*/
+.tabs-content {
+	border: 1px solid #e6e6e6;
+}
+// Used for custom deep linking tabs
+.custom-tabs.tab-container {
+	ul.tabs {
+		border: none;
+		//border-bottom: 1px solid #e6e6e6;
+		line-height: 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			&:first-child a {
+				border-left: 1px solid white;
+				border-top-left-radius: 10px;
+				background: #f0f0f0;
+			}
+			&:last-child a {
+				border-top-right-radius: 10px;
+				background: #f0f0f0;
+			}
+			&.is-active a {
+				background: pink;
+			}
+
+
+			a {
+				float: left;
+				border-right: 1px solid white;
+				background: #f0f0f0;
+				&:hover {
+					background: pink;
+				}
+				&.tab {
+					padding: 1.25rem 1.5rem;
+					line-height: 1;
+					font-size: 1.5rem;
+					font-family: $font-stack-bold;
+					color: white;
+					background-color: $lightgray;
+					&.is-active,[aria-selected='true'] {
+						background: $blue;
+					}
+				}
+			}
+		}
+	} // end .tabs
+} // end .tab-container
+
+.custom-tabs.tab-container,
+.tabs-vertical {
+	section[aria-hidden='false'] {
+		display: none;
+		opacity: 0;
+	}
+	section[aria-hidden='false'] {
+		display: block;
+		animation: fadeIn .4s;
+		opacity: 1;
+	}
+} // end .tab-container
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* TABS: Custom deep linking tabs animation using animation (variables):   */
+/*-------------------------------------------------------------------------------------------*/
+
+// Used for custom deep linking tabs
+/*
+.tab-container {
+	ul.tabs {
+		border: 1px solid #e6e6e6;
+		li {
+			a {
+				float: left;
+				&:hover {
+					background: #f0f0f0;
+				}
+				&.is-active,[aria-selected='true'] {
+					background: #e6e6e6;
+				}
+				&.tab {
+					padding: 1.25rem 1.5rem;
+					line-height: 1;
+					font-size: 12px;
+					color: #2199e8;
+				}
+			}
+		}
+	} // end .tabs
+} // end .tab-container
+
+section[aria-hidden='false'] {
+	display: none;
+	opacity: 0;
+}
+section[aria-hidden='false'] {
+	display: block;
+	-webkit-animation: fadeIn .4s;
+	animation: fadeIn .4s;
+	opacity: 1;
+}
+*/

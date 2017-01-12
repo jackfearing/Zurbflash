@@ -1,0 +1,38 @@
+/*-------------------------------------------------------------------------------------------*/
+/* FOOTER */
+/*-------------------------------------------------------------------------------------------*/
+
+footer {
+	//background: red;
+	//padding: 20px;
+	//text-align: center;
+	//border-top: 1px solid $lightgray;
+	font-size: 0.8125rem;
+	color: black;
+	.footer-logo {
+		height: 50px;
+		width: auto;
+	}
+	&.footer {
+		margin-top: 0; // overrides '_main' .footer class style
+	}
+	.copyright {
+		padding-top: 20px;
+		font-family: $font-stack;
+		padding-left: 0.9375rem;
+		padding-right: 0.9375rem;
+		p {
+			margin-bottom: 0;
+			padding-bottom: 0;
+			font-size: .85rem;
+		}
+		.source-org {
+			font-size: .85rem;
+			padding-bottom: 20px;
+			p {
+				display: inline-block;
+			}
+		}
+	}
+}
+

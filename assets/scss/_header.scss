@@ -1,0 +1,181 @@
+/*-------------------------------------------------------------------------------------------*/
+/* HEADER: CATEGORY ARCHIVES */
+/*-------------------------------------------------------------------------------------------*/
+
+$headerHeightLarge: 500px;
+$headerHeightMedium: calc(#{$headerHeightLarge} / 2);
+$headerHeightSmall: calc(#{$headerHeightLarge} / 3);
+
+.header-category-container {
+	//min-height: 300px;
+	width: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	//background-position: center center;
+	img { // used if image in not set as background
+		width: 100%;
+		height: auto;
+	}
+	table {
+		//height: 300px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center top;
+		margin-bottom: 0;
+		tbody {
+			background-color:transparent;
+			border: none;
+			tr {
+				td {
+					padding: 30px;
+					text-align: center;
+					background-color: rgba(0, 0, 0, 0.3);
+					//height: $headerHeightLarge; // Fixes Firefox min-height
+					//min-height: $headerHeightLarge; // Fixes Firefox min-height
+					.table-cell-wrapper {
+						margin: 0 auto;
+						color: white;
+						max-width: 1200px;
+						//display: table; // Fixes Firefox min-height
+						//height: 500px; // Fixes Firefox min-height
+						//min-height: 500px; // Fixes Firefox min-height
+						//width: 100%; // Fixes Firefox min-height
+					}
+				}
+			}
+		}
+	}
+}
+
+
+@include breakpoint(medium only) {
+	.header-category-container {
+		table {
+			tbody {
+				tr {
+					td {
+						//height: $headerHeightMedium; // Fixes Firefox min-height
+						//min-height: $headerHeightMedium; // Fixes Firefox min-height
+						//background-color: red;
+						.table-cell-wrapper {
+							//min-height: calc(1000px / 2); // Fixes Firefox min-height
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(small only) {
+	.header-category-container {
+		table {
+			tbody {
+				tr {
+					td {
+						//height: $headerHeightSmall; // Fixes Firefox min-height
+						//min-height: $headerHeightSmall; // Fixes Firefox min-height
+						//background-color: blue;
+						.table-cell-wrapper {
+							//min-height: calc(1000px / 2); // Fixes Firefox min-height
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* HEADER: VIDEO */
+/*-------------------------------------------------------------------------------------------*/
+
+.youtube-video-wrapper {
+	position: relative;
+	top: 0;
+	table {
+		z-index: 100;
+		background: transparent;
+		border: none;
+		color: white;
+		margin: 0;
+		height: 100%;
+		td {
+			vertical-align: middle;
+			padding: 60px 0 !important;
+		}
+	}
+	tbody {
+		background: transparent;
+		border: none;
+	}
+} //end .youtube-video-wrapper
+
+.video-pattern {
+	background-image:url('../images/pattern.png');
+	background-repeat: repeat;
+	background-attachment:scroll;
+}
+
+.video-wrapper {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+.video-overlay {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 2;
+}
+
+.tv {
+	position: absolute;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	.screen {
+		position: absolute;
+		z-index: 1;
+		margin: auto;
+		opacity: 0;
+		transition: opacity .5s;
+		&.active {
+			opacity: 1;
+		}
+	}
+} //end .tv
+
+@include breakpoint(large) {
+	.tv .screen {
+		right: -50% !important; // Edit the js file to alt left position
+		left: -50% !important; // Edit the js file to alt left position
+	}
+}
+
+
+@include breakpoint(medium down) {
+	#inline-video-width-0-1-0-0 {
+		//width: 50%;
+		//margin: 0 auto;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.header-category-container .table-cell-wrapper p {
+	color: red !important;
+	background: white;
+}

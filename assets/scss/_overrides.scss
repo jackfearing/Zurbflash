@@ -1,0 +1,426 @@
+
+#main {
+  	// Paragraphs
+	p {
+		margin-bottom: 0; // Fixes issue in Firefox with maring inside a container with background color
+		//padding-bottom: 1.4rem;
+		//font-size: 1rem;
+	}
+} // #main
+
+
+.callout {
+	background-color: rgba(127, 127, 127, 0.63);
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* RRSSB BUTTONS */
+/*-------------------------------------------------------------------------------------------*/
+#main ul.rrssb-buttons {
+	overflow: hidden; //prevent scroll bars
+	padding-left: 0;
+}
+/*
+ul.rrssb-buttons li a {
+	width: 100%;
+	max-width: 200px;
+	font-size: 0.85rem;
+	font-family: $font-stack-bold;
+	font-weight: normal;
+}
+*/
+
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* FLUID BOX MODAL WINDOW */
+/*-------------------------------------------------------------------------------------------*/
+/*
+a[href$=".jpg"] .fluidbox__wrap,
+a[href$=".jpeg"] .fluidbox__wrap   {
+		z-index: 10 !important; // override fluidbox default z-index code, prevents image display on top of custom off-canvas overlay menu
+	}
+*/
+
+
+
+.fluidbox-wrap {
+  z-index: auto !important;
+}
+.fluidbox-opened .fluidbox-ghost {
+  z-index: 1010;
+}
+.fluidbox-closed .fluidbox-ghost {
+  z-index: auto;
+}
+.fluidbox-ghost:before {
+	animation: none;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* LIGHTGALLERY VIDEO */
+/*-------------------------------------------------------------------------------------------*/
+
+.lg-outer {
+	.lg {
+		.lg-sub-html {
+			h3 {
+				margin-bottom: 0;
+				font-family: $font-stack-bold;
+				font-size: 1.3rem;
+			}
+		}
+		.lg-thumb-item img:hover {
+			cursor: pointer !important;
+		}
+		.lg-video-cont.lg-has-html5 {
+			.lg-object:hover {
+				cursor: pointer !important;
+			}
+			.lg-video-play {
+				height: 256px;
+				width: 256px;
+				margin-left: -128px;
+				margin-top: -128px;
+				opacity: 0.8;
+				background: transparent url("../svg/youtube.svg") no-repeat center center;
+				background-size: cover;
+				z-index: 1000 !important;
+				position: absolute !important;
+				transform: scale3d(1, 1, 1);
+				transition: all 300ms ease-in-out;
+				&:hover {
+					background: transparent url("../svg/youtube.svg") no-repeat center center;
+					background-size: cover;
+					transform: scale3d(1.1, 1.1, 1.1);
+				}
+			}
+			&:hover .lg-video-play {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+/*-------------------------------------------------------------------------------------------*/
+/* FLEXSLIDER 2 */
+/*-------------------------------------------------------------------------------------------*/
+
+/*
+
+.flexslider-content {
+	position: absolute;
+	width: 85%;
+	height: 350px;
+    margin: 0 auto;
+}
+.flexslider-content table {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.flexslider-content table td {
+	background: red;
+
+}
+*/
+
+ul.slides {
+	position: relative;
+}
+.flexslider-content {
+	position: absolute;
+	background: rgba(255, 191, 202, 0.81);
+	margin: 0 auto;
+	width: 100%;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+
+
+
+.flex-control-nav {
+	//z-index: 1000; // place nav buttons above slider
+}
+.flex-wrapper {
+	margin-top: -$nav-height; // Comment out to position flexslider on top of navigation
+}
+.flexslider {
+	margin: 0 !important;
+	overflow: hidden; // Prevents larger responsive images overlapping content
+	background: none !important;
+	//max-height: 550px !important;
+	&:before {
+		content: " ";
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		//background-image: url("../svg/download.svg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		width: 500px;
+		height: 200px;
+		z-index: 3;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		display: block;
+		//background-color: rgba(0, 0, 0, 0.5);
+		z-index: 2;
+	}
+	.slides {
+		li {
+			// Only used when setting 'FLEXSLIDER' animation to 'FADE'
+			// Flexslider fixes for interchange and responsive images
+			position: absolute !important; // Used for FADE setting: fixes issue large images pushes content down
+		}
+	}
+}
+.custom-controls {
+	position: relative;
+	list-style: none;
+	z-index: 5; // place nav buttons above slider
+	text-align: center;
+	margin: 1rem 0;
+	//top:-40px; // Controls position of slider circles
+	li {
+		margin: 0 3px;
+		display: inline-block;
+		overflow: hidden;
+		a {
+			float: left;
+			width: 15px;
+			height: 15px;
+			display: block;
+			//background: #666;
+			background: rgba(0, 0, 0, 0.5);
+			//background: rgba(255, 255, 255, 1);
+			border: 2px solid rgba(255, 255, 255, 1);
+			cursor: pointer;
+			text-indent: -9999px;
+			-o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+			box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+			border-radius: 20px;
+			&.flex-active {
+				background: rgba(0, 174, 255, 0.85);
+				border: 2px solid rgba(255, 255, 255, 1);
+			}
+			&:hover {
+				background: rgba(0, 174, 255, 0.85);
+			}
+		}
+	}
+}
+
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* FOUNDATION 6 */
+/*-------------------------------------------------------------------------------------------*/
+
+// Buttons
+.button {
+	a {
+		color: white;
+	}
+}
+// Allows control of background color
+.off-canvas-content {
+	background: inherit;
+	overflow: hidden;
+}
+
+// Change background color off-canvas menu
+.off-canvas {
+	//background: pink;
+}
+
+// Change background color of off-canvas menu container
+.off-canvas-wrapper {
+	//background: red;
+}
+
+// Change background color of main content container
+.off-canvas-wrapper-inner {
+	//background: gray;
+}
+
+// Full width row: add class .full-width to row
+.header-container.row {
+	margin-top: 0; //remove slight margin set below in header area
+}
+.row {
+	//margin-top: 20px; // Global margin added
+	margin-bottom: 20px; // Global margin added
+	&.full-width {
+	    width: 100%;
+	    margin-left: auto;
+	    margin-right: auto;
+	    max-width: 100%;
+	    //background: rgba(150,  255,  0, 0.3);
+		.standard-width { // Used when component width is inside full-width container
+		    background: purple;
+		    max-width: 75rem;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	&.standard-width {
+	    //background: rgba(243, 20, 31, 0.8);
+	    max-width: 75rem;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.footer .row {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+body.page-template-tpl-modules-sidebar-single {
+	.row {
+		&.standard-width {
+		    width: 100%;
+		    margin-left: auto;
+		    margin-right: auto;
+		    //max-width: initial;
+	    }
+	}
+}
+
+// Foundation 6 tabs animation using animation (variables)
+// Used for Foundation 6 tabs
+.tabs-content > .content-wrapper {
+	display: none;
+	opacity: 0;
+}
+.tabs-content > .is-active .content-wrapper {
+	display: block;
+	animation: fadeIn .4s;
+	opacity: 1;
+}
+
+
+
+ /* !Foundation -  Style reveal modal box
+	 Don't forget to add the .video class to the code for style to work
+===============================================================================*/
+
+// This may or may not cause issues with desktop and mobile viewing
+// Hides scroll-bar on reveal-overlay
+// Sets min/max height for reveal modal scroll
+.reveal-overlay {
+	overflow-y: hidden; // Causes issues if content is longer then page
+	.reveal {
+		min-height: 20%;
+		max-height: 85% !important;
+		z-index: auto;
+		top: 80px !important;
+		//overflow-y: scroll;
+		//-webkit-overflow-scrolling: touch; // momentum scrolling inside the fixed element
+		//-webkit-overflow-scrolling: auto;
+	}
+} // .reveal-overlay special
+
+body.is-reveal-open {
+overflow: hidden !important;
+}
+
+.reveal-overlay {
+	//background: rgba(255, 0, 0, 0.8);
+	background: rgba(63, 175, 227, 0.8);
+	.reveal {
+		outline: none;
+		border: none;
+		border-radius: 0;
+		//max-width: 800px; // Override foundation reveal defualt width
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+		&.large.video {
+			max-width: 900px;
+		}
+		&.video {
+			padding: 1rem 1rem 0;
+			border: none;
+		}
+		.close-button {
+			//background: rgba(66, 176, 228, 1);
+			background: rgba(248, 150, 30, 1);
+			border-radius: 50%;
+			border: 3px solid #DDD;
+			//padding: .1rem 0 .4rem .055rem;
+			font-size: 2.25rem;
+			font-weight: bold;
+			height: 50px;
+			width: 50px;
+			transition: all 300ms ease-out;
+			&:hover {
+				background: white;
+				color: $green !important;
+				border-color: red;
+			}
+			span {
+				position: absolute;
+				top: 6px;
+				left: 13px;
+			}
+		}
+	} // .reveal
+} // .reveal-overlay
+
+body.gecko {
+	.reveal {
+		.close-button {
+			span {
+				top: 5px;
+				left: 12px;
+			}
+		}
+	} // .reveal
+}
+/*
+.close-button.fixed {
+	position: fixed;
+	color: white;
+	top: 1rem;
+	right: 1%;
+	z-index: 1100;
+}
+*/
+
+.close-button.fixed {
+	position: fixed;
+	color: white;
+	top: .65rem;
+	right: 1%;
+	z-index: 1100;
+}
+
+// IE FIX for reveal close button
+body.ie .reveal .close-button {
+	//padding: .25rem 0 .4rem .085rem;
+}
+
+
+
+ /* !SMALL Screen Sizes
+===============================================================================*/
+@media only screen and (max-width: 40.0625em) {
+	.reveal {
+		//top: 6.25rem !important;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		//max-width: 62.5rem;
+		width: 90vw;
+		min-height: 10vh; // overide Foundation displaying full height modal on mobile
+		height: auto;
+	}
+}

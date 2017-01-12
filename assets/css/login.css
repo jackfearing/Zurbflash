@@ -1,0 +1,58 @@
+/******************************************************************
+
+Stylesheet: Login Stylesheet
+
+This stylesheet is loaded is only on the login page. This way you can style
+the login page. It won't affect any other page, admin or front-end.
+
+Make sure functions/admin.php is activated in your functions.php file.
+
+This stylesheet is turned off by default.
+
+For more info, check out the codex:
+http://codex.wordpress.org/Creating_Admin_Themes
+
+******************************************************************/
+body.login {
+  background-image: url("../build/images/bg-dark-embroidery.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center; }
+
+#login h1 a {
+  background: url("../build/images/login-logo.png") no-repeat top center;
+  width: 320px;
+  height: 67px;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+  box-shadow: none; }
+  #login h1 a:active {
+    outline: 0; }
+
+#login label {
+  font-size: 12px;
+  color: #555555; }
+
+#login input[type="text"],
+#login input[type="password"] {
+  background-color: white;
+  border-color: #DDD;
+  -webkit-border-radius: 4px;
+  color: black; }
+
+#login .button-primary {
+  float: right;
+  min-width: 120px;
+  transition: background-color .5s ease;
+  color: #fff;
+  border: none;
+  -webkit-border-radius: 4px;
+  background-color: #36495e !important;
+  box-shadow: none;
+  text-shadow: none; }
+  #login .button-primary:hover {
+    background-color: #37bf9d !important; }
+  #login .button-primary:active {
+    background-color: #17a8e3 !important;
+    transform: matrix(1, 0, 0, 1, 0, 0); }

@@ -1,0 +1,76 @@
+/*-------------------------------------------------------------------------------------------*/
+/* BUTTONS */
+/*-------------------------------------------------------------------------------------------*/
+
+.button.radius {
+	border-radius: .25rem;
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* BUTTON - OUTLINE (ADD FROM WP EDITOR) */
+/*-------------------------------------------------------------------------------------------*/
+// Button styling
+// Depending on how the custom button style in the editor is applied (add link / apply or apply / add link)
+
+.button {
+	&.outline {
+		border: 3px solid $green;
+		background-color: white;
+		color: $green;
+		text-transform: uppercase;
+		font-family: $font-stack-extrabold;
+		font-size: 0.85rem;
+		padding: 0.85em 1.5em;
+		margin-top: 10px;
+		a {
+			color: $green;
+		}
+		&:hover {
+			background-color: $green;
+			border: 3px solid #efefef;
+			color: white;
+			a {
+				color: white;
+			}
+		}
+	}
+}
+
+
+/*-------------------------------------------------------------------------------------------*/
+/* BUTTON - USED IN REVEAL DOWNLOADS) */
+/*-------------------------------------------------------------------------------------------*/
+
+a {
+	&.button {
+		padding: 10px 20px 10px 10px;
+		&[href$=".pdf"]:before {
+		    content: "";
+		    display: inline-block;
+		    vertical-align: middle;
+		    line-height: normal;
+		    background: url("../svg/pdfs-hover.svg") no-repeat;
+		    background-size: contain;
+		    width: 30px;
+		    height: 30px;
+		    margin-right: 6px;
+		}
+		&:hover {
+			background-color: #CB0606;
+			&[href$=".pdf"]:before {
+			    content: "";
+			    display: inline-block;
+			    vertical-align: middle;
+			    line-height: normal;
+			    background: url("../svg/zips.svg") no-repeat;
+			    background-size: contain;
+			    width: 30px;
+			    height: 30px;
+			    margin-right: 6px;
+			}
+		}
+	}
+}
+
+

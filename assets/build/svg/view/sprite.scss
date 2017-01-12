@@ -1,0 +1,284 @@
+%svg-common {
+	background: url("svg/sprite.view.svg") no-repeat;
+}
+
+.svg-icon-alarm {
+	@extend %svg-common;
+	background-position: 98.55072463768116% 73.35483214649034%;
+}
+
+.svg-icon-alarm-dims {
+	width: 30px;
+	height: 30px;
+}
+
+.svg-icon-camera {
+	@extend %svg-common;
+	background-position: 82.31511254019293% 0;
+}
+
+.svg-icon-camera-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-icon-camera-white {
+	@extend %svg-common;
+	background-position: 0 0;
+}
+
+.svg-icon-camera-white-dims {
+	width: 512px;
+	height: 512px;
+}
+
+.svg-icon-car {
+	@extend %svg-common;
+	background-position: 100% 0;
+}
+
+.svg-icon-car-dims {
+	width: 110px;
+	height: 110px;
+}
+
+.svg-icon-chat {
+	@extend %svg-common;
+	background-position: 97.62040724106997% 22.630261401071813%;
+}
+
+.svg-icon-chat-dims {
+	width: 85.039px;
+	height: 85.039px;
+}
+
+.svg-icon-chat-active {
+	@extend %svg-common;
+	background-position: 97.61677788369876% 40.956681034482756%;
+}
+
+.svg-icon-chat-active-dims {
+	width: 85px;
+	height: 85px;
+}
+
+.svg-icon-docs {
+	@extend %svg-common;
+	background-position: 98.89400921658986% 62.49504741833508%;
+}
+
+.svg-icon-docs-dims {
+	width: 49px;
+	height: 64px;
+}
+
+.svg-icon-docs-hover {
+	@extend %svg-common;
+	background-position: 94.3778801843318% 55.751106427818755%;
+}
+
+.svg-icon-docs-hover-dims {
+	width: 49px;
+	height: 64px;
+}
+
+.svg-icon-download {
+	@extend %svg-common;
+	background-position: 71.94403578528828% 74.57966101694915%;
+}
+
+.svg-icon-download-dims {
+	width: 128px;
+	height: 128px;
+}
+
+.svg-icon-eyepreso {
+	@extend %svg-common;
+	background-position: 99.91522369772427% 21.063189568706118%;
+}
+
+.svg-icon-eyepreso-dims {
+	width: 24.02px;
+	height: 16px;
+}
+
+.svg-icon-facebook {
+	@extend %svg-common;
+	background-position: 92.92196007259528% 73.50438328236494%;
+}
+
+.svg-icon-facebook-dims {
+	width: 32px;
+	height: 32px;
+}
+
+.svg-icon-folder {
+	@extend %svg-common;
+	background-position: 0 99.80545733121765%;
+}
+
+.svg-icon-folder-dims {
+	width: 499.997px;
+	height: 500.002px;
+}
+
+.svg-icon-gwapo-logo {
+	@extend %svg-common;
+	background-position: 76.17144772322176% 59.19280437471819%;
+}
+
+.svg-icon-gwapo-logo-dims {
+	width: 477.59px;
+	height: 148.03px;
+}
+
+.svg-icon-icon-pdf {
+	@extend %svg-common;
+	background-position: 54.93023817894182% 95.50012298699232%;
+}
+
+.svg-icon-icon-pdf-dims {
+	width: 223.76px;
+	height: 321.87px;
+}
+
+.svg-icon-notification {
+	@extend %svg-common;
+	background-position: 95.82577132486388% 73.50438328236494%;
+}
+
+.svg-icon-notification-dims {
+	width: 32px;
+	height: 32px;
+}
+
+.svg-icon-pdf {
+	@extend %svg-common;
+	background-position: 84.66769383697815% 74.57966101694915%;
+}
+
+.svg-icon-pdf-dims {
+	width: 128px;
+	height: 128px;
+}
+
+.svg-icon-pdfs {
+	@extend %svg-common;
+	background-position: 94.3778801843318% 49.00716543730242%;
+}
+
+.svg-icon-pdfs-dims {
+	width: 49px;
+	height: 64px;
+}
+
+.svg-icon-pdfs-hover {
+	@extend %svg-common;
+	background-position: 98.89400921658986% 49.00716543730242%;
+}
+
+.svg-icon-pdfs-hover-dims {
+	width: 49px;
+	height: 64px;
+}
+
+.svg-icon-photo {
+	@extend %svg-common;
+	background-position: 71.94403578528828% 89.04293785310735%;
+}
+
+.svg-icon-photo-dims {
+	width: 128px;
+	height: 128px;
+}
+
+.svg-icon-pin {
+	@extend %svg-common;
+	background-position: 97.62040724106997% 31.794331873861076%;
+}
+
+.svg-icon-pin-dims {
+	width: 85.039px;
+	height: 85.039px;
+}
+
+.svg-icon-play-circle {
+	@extend %svg-common;
+	background-position: 99.55466786355476% 24.773413897280967%;
+}
+
+.svg-icon-play-circle-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-icon-play-circle-white {
+	@extend %svg-common;
+	background-position: 99.55466786355476% 22.759315206445116%;
+}
+
+.svg-icon-play-circle-white-dims {
+	width: 20px;
+	height: 20px;
+}
+
+.svg-icon-ppts {
+	@extend %svg-common;
+	background-position: 94.3778801843318% 69.23898840885143%;
+}
+
+.svg-icon-ppts-dims {
+	width: 49px;
+	height: 64px;
+}
+
+.svg-icon-ppts-hover {
+	@extend %svg-common;
+	background-position: 98.89400921658986% 69.23898840885143%;
+}
+
+.svg-icon-ppts-hover-dims {
+	width: 49px;
+	height: 64px;
+}
+
+.svg-icon-tv {
+	@extend %svg-common;
+	background-position: 84.66769383697815% 89.04293785310735%;
+}
+
+.svg-icon-tv-dims {
+	width: 128px;
+	height: 128px;
+}
+
+.svg-icon-youtube {
+	@extend %svg-common;
+	background-position: 99.03288201160541% 12.048192771084338%;
+}
+
+.svg-icon-youtube-dims {
+	width: 100px;
+	height: 100px;
+}
+
+.svg-icon-zips {
+	@extend %svg-common;
+	background-position: 94.3778801843318% 62.49504741833508%;
+}
+
+.svg-icon-zips-dims {
+	width: 49px;
+	height: 64px;
+}
+
+.svg-icon-zips-hover {
+	@extend %svg-common;
+	background-position: 98.89400921658986% 55.751106427818755%;
+}
+
+.svg-icon-zips-hover-dims {
+	width: 49px;
+	height: 64px;
+}
+

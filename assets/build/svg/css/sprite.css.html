@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG CSS sprite preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		<style>i{text-indent:200%;white-space:nowrap;overflow:hidden;display:inline-block;background-size:1134px 1013px!important}</style>
+
+<!--
+
+Sprite CSS
+====================================================================================================
+This is an all-in-one inline version of the CSS necessary to use the SVG sprite.
+
+-->
+
+<style type="text/css">
+.svg-icon-alarm {
+	background: url("svg/sprite.css-d23f638c.svg") 98.55072463768116% 73.35483214649034% no-repeat;
+	width: 30px;
+	height: 30px;
+}
+.svg-icon-camera {
+	background: url("svg/sprite.css-d23f638c.svg") 82.31511254019293% 0 no-repeat;
+	width: 512px;
+	height: 512px;
+}
+.svg-icon-camera-white {
+	background: url("svg/sprite.css-d23f638c.svg") 0 0 no-repeat;
+	width: 512px;
+	height: 512px;
+}
+.svg-icon-car {
+	background: url("svg/sprite.css-d23f638c.svg") 100% 0 no-repeat;
+	width: 110px;
+	height: 110px;
+}
+.svg-icon-chat {
+	background: url("svg/sprite.css-d23f638c.svg") 97.62040724106997% 22.630261401071813% no-repeat;
+	width: 85.039px;
+	height: 85.039px;
+}
+.svg-icon-chat-active {
+	background: url("svg/sprite.css-d23f638c.svg") 97.61677788369876% 40.956681034482756% no-repeat;
+	width: 85px;
+	height: 85px;
+}
+.svg-icon-docs {
+	background: url("svg/sprite.css-d23f638c.svg") 98.89400921658986% 62.49504741833508% no-repeat;
+	width: 49px;
+	height: 64px;
+}
+.svg-icon-docs-hover {
+	background: url("svg/sprite.css-d23f638c.svg") 94.3778801843318% 55.751106427818755% no-repeat;
+	width: 49px;
+	height: 64px;
+}
+.svg-icon-download {
+	background: url("svg/sprite.css-d23f638c.svg") 71.94403578528828% 74.57966101694915% no-repeat;
+	width: 128px;
+	height: 128px;
+}
+.svg-icon-eyepreso {
+	background: url("svg/sprite.css-d23f638c.svg") 99.91522369772427% 21.063189568706118% no-repeat;
+	width: 24.02px;
+	height: 16px;
+}
+.svg-icon-facebook {
+	background: url("svg/sprite.css-d23f638c.svg") 92.92196007259528% 73.50438328236494% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-icon-folder {
+	background: url("svg/sprite.css-d23f638c.svg") 0 99.80545733121765% no-repeat;
+	width: 499.997px;
+	height: 500.002px;
+}
+.svg-icon-gwapo-logo {
+	background: url("svg/sprite.css-d23f638c.svg") 76.17144772322176% 59.19280437471819% no-repeat;
+	width: 477.59px;
+	height: 148.03px;
+}
+.svg-icon-icon-pdf {
+	background: url("svg/sprite.css-d23f638c.svg") 54.93023817894182% 95.50012298699232% no-repeat;
+	width: 223.76px;
+	height: 321.87px;
+}
+.svg-icon-notification {
+	background: url("svg/sprite.css-d23f638c.svg") 95.82577132486388% 73.50438328236494% no-repeat;
+	width: 32px;
+	height: 32px;
+}
+.svg-icon-pdf {
+	background: url("svg/sprite.css-d23f638c.svg") 84.66769383697815% 74.57966101694915% no-repeat;
+	width: 128px;
+	height: 128px;
+}
+.svg-icon-pdfs {
+	background: url("svg/sprite.css-d23f638c.svg") 94.3778801843318% 49.00716543730242% no-repeat;
+	width: 49px;
+	height: 64px;
+}
+.svg-icon-pdfs-hover {
+	background: url("svg/sprite.css-d23f638c.svg") 98.89400921658986% 49.00716543730242% no-repeat;
+	width: 49px;
+	height: 64px;
+}
+.svg-icon-photo {
+	background: url("svg/sprite.css-d23f638c.svg") 71.94403578528828% 89.04293785310735% no-repeat;
+	width: 128px;
+	height: 128px;
+}
+.svg-icon-pin {
+	background: url("svg/sprite.css-d23f638c.svg") 97.62040724106997% 31.794331873861076% no-repeat;
+	width: 85.039px;
+	height: 85.039px;
+}
+.svg-icon-play-circle {
+	background: url("svg/sprite.css-d23f638c.svg") 99.55466786355476% 24.773413897280967% no-repeat;
+	width: 20px;
+	height: 20px;
+}
+.svg-icon-play-circle-white {
+	background: url("svg/sprite.css-d23f638c.svg") 99.55466786355476% 22.759315206445116% no-repeat;
+	width: 20px;
+	height: 20px;
+}
+.svg-icon-ppts {
+	background: url("svg/sprite.css-d23f638c.svg") 94.3778801843318% 69.23898840885143% no-repeat;
+	width: 49px;
+	height: 64px;
+}
+.svg-icon-ppts-hover {
+	background: url("svg/sprite.css-d23f638c.svg") 98.89400921658986% 69.23898840885143% no-repeat;
+	width: 49px;
+	height: 64px;
+}
+.svg-icon-tv {
+	background: url("svg/sprite.css-d23f638c.svg") 84.66769383697815% 89.04293785310735% no-repeat;
+	width: 128px;
+	height: 128px;
+}
+.svg-icon-youtube {
+	background: url("svg/sprite.css-d23f638c.svg") 99.03288201160541% 12.048192771084338% no-repeat;
+	width: 100px;
+	height: 100px;
+}
+.svg-icon-zips {
+	background: url("svg/sprite.css-d23f638c.svg") 94.3778801843318% 62.49504741833508% no-repeat;
+	width: 49px;
+	height: 64px;
+}
+.svg-icon-zips-hover {
+	background: url("svg/sprite.css-d23f638c.svg") 98.89400921658986% 55.751106427818755% no-repeat;
+	width: 49px;
+	height: 64px;
+}
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+		<header>
+			<h1>SVG CSS sprite preview</h1>
+			<p>This preview features the generated SVG file as a conventional CSS sprite. The shapes are displayed as background images of several <code>&lt;i&gt;</code> elements.</p>
+		</header>
+		<section>
+
+<!--
+
+Conventional CSS sprite
+====================================================================================================
+This technique uses CSS classes to display portions of the sprite as background image of
+appropriately sized elements.
+
+-->
+
+			<ul>
+				<li title="icon-alarm">
+					<div class="icon-box">
+
+						<!-- icon-alarm -->
+						<i class="svg-icon-alarm">icon-alarm</i>
+
+					</div>
+					<h2>icon-alarm</h2>
+				</li>
+				<li title="icon-camera">
+					<div class="icon-box">
+
+						<!-- icon-camera -->
+						<i class="svg-icon-camera">icon-camera</i>
+
+					</div>
+					<h2>icon-camera</h2>
+				</li>
+				<li title="icon-camera-white">
+					<div class="icon-box">
+
+						<!-- icon-camera-white -->
+						<i class="svg-icon-camera-white">icon-camera-white</i>
+
+					</div>
+					<h2>icon-camera-white</h2>
+				</li>
+				<li title="icon-car">
+					<div class="icon-box">
+
+						<!-- icon-car -->
+						<i class="svg-icon-car">icon-car</i>
+
+					</div>
+					<h2>icon-car</h2>
+				</li>
+				<li title="icon-chat">
+					<div class="icon-box">
+
+						<!-- icon-chat -->
+						<i class="svg-icon-chat">icon-chat</i>
+
+					</div>
+					<h2>icon-chat</h2>
+				</li>
+				<li title="icon-chat-active">
+					<div class="icon-box">
+
+						<!-- icon-chat-active -->
+						<i class="svg-icon-chat-active">icon-chat-active</i>
+
+					</div>
+					<h2>icon-chat-active</h2>
+				</li>
+				<li title="icon-docs">
+					<div class="icon-box">
+
+						<!-- icon-docs -->
+						<i class="svg-icon-docs">icon-docs</i>
+
+					</div>
+					<h2>icon-docs</h2>
+				</li>
+				<li title="icon-docs-hover">
+					<div class="icon-box">
+
+						<!-- icon-docs-hover -->
+						<i class="svg-icon-docs-hover">icon-docs-hover</i>
+
+					</div>
+					<h2>icon-docs-hover</h2>
+				</li>
+				<li title="icon-download">
+					<div class="icon-box">
+
+						<!-- icon-download -->
+						<i class="svg-icon-download">icon-download</i>
+
+					</div>
+					<h2>icon-download</h2>
+				</li>
+				<li title="icon-eyepreso">
+					<div class="icon-box">
+
+						<!-- icon-eyepreso -->
+						<i class="svg-icon-eyepreso">icon-eyepreso</i>
+
+					</div>
+					<h2>icon-eyepreso</h2>
+				</li>
+				<li title="icon-facebook">
+					<div class="icon-box">
+
+						<!-- icon-facebook -->
+						<i class="svg-icon-facebook">icon-facebook</i>
+
+					</div>
+					<h2>icon-facebook</h2>
+				</li>
+				<li title="icon-folder">
+					<div class="icon-box">
+
+						<!-- icon-folder -->
+						<i class="svg-icon-folder">icon-folder</i>
+
+					</div>
+					<h2>icon-folder</h2>
+				</li>
+				<li title="icon-gwapo-logo">
+					<div class="icon-box">
+
+						<!-- icon-gwapo-logo -->
+						<i class="svg-icon-gwapo-logo">icon-gwapo-logo</i>
+
+					</div>
+					<h2>icon-gwapo-logo</h2>
+				</li>
+				<li title="icon-icon-pdf">
+					<div class="icon-box">
+
+						<!-- icon-icon-pdf -->
+						<i class="svg-icon-icon-pdf">icon-icon-pdf</i>
+
+					</div>
+					<h2>icon-icon-pdf</h2>
+				</li>
+				<li title="icon-notification">
+					<div class="icon-box">
+
+						<!-- icon-notification -->
+						<i class="svg-icon-notification">icon-notification</i>
+
+					</div>
+					<h2>icon-notification</h2>
+				</li>
+				<li title="icon-pdf">
+					<div class="icon-box">
+
+						<!-- icon-pdf -->
+						<i class="svg-icon-pdf">icon-pdf</i>
+
+					</div>
+					<h2>icon-pdf</h2>
+				</li>
+				<li title="icon-pdfs">
+					<div class="icon-box">
+
+						<!-- icon-pdfs -->
+						<i class="svg-icon-pdfs">icon-pdfs</i>
+
+					</div>
+					<h2>icon-pdfs</h2>
+				</li>
+				<li title="icon-pdfs-hover">
+					<div class="icon-box">
+
+						<!-- icon-pdfs-hover -->
+						<i class="svg-icon-pdfs-hover">icon-pdfs-hover</i>
+
+					</div>
+					<h2>icon-pdfs-hover</h2>
+				</li>
+				<li title="icon-photo">
+					<div class="icon-box">
+
+						<!-- icon-photo -->
+						<i class="svg-icon-photo">icon-photo</i>
+
+					</div>
+					<h2>icon-photo</h2>
+				</li>
+				<li title="icon-pin">
+					<div class="icon-box">
+
+						<!-- icon-pin -->
+						<i class="svg-icon-pin">icon-pin</i>
+
+					</div>
+					<h2>icon-pin</h2>
+				</li>
+				<li title="icon-play-circle">
+					<div class="icon-box">
+
+						<!-- icon-play-circle -->
+						<i class="svg-icon-play-circle">icon-play-circle</i>
+
+					</div>
+					<h2>icon-play-circle</h2>
+				</li>
+				<li title="icon-play-circle-white">
+					<div class="icon-box">
+
+						<!-- icon-play-circle-white -->
+						<i class="svg-icon-play-circle-white">icon-play-circle-white</i>
+
+					</div>
+					<h2>icon-play-circle-white</h2>
+				</li>
+				<li title="icon-ppts">
+					<div class="icon-box">
+
+						<!-- icon-ppts -->
+						<i class="svg-icon-ppts">icon-ppts</i>
+
+					</div>
+					<h2>icon-ppts</h2>
+				</li>
+				<li title="icon-ppts-hover">
+					<div class="icon-box">
+
+						<!-- icon-ppts-hover -->
+						<i class="svg-icon-ppts-hover">icon-ppts-hover</i>
+
+					</div>
+					<h2>icon-ppts-hover</h2>
+				</li>
+				<li title="icon-tv">
+					<div class="icon-box">
+
+						<!-- icon-tv -->
+						<i class="svg-icon-tv">icon-tv</i>
+
+					</div>
+					<h2>icon-tv</h2>
+				</li>
+				<li title="icon-youtube">
+					<div class="icon-box">
+
+						<!-- icon-youtube -->
+						<i class="svg-icon-youtube">icon-youtube</i>
+
+					</div>
+					<h2>icon-youtube</h2>
+				</li>
+				<li title="icon-zips">
+					<div class="icon-box">
+
+						<!-- icon-zips -->
+						<i class="svg-icon-zips">icon-zips</i>
+
+					</div>
+					<h2>icon-zips</h2>
+				</li>
+				<li title="icon-zips-hover">
+					<div class="icon-box">
+
+						<!-- icon-zips-hover -->
+						<i class="svg-icon-zips-hover">icon-zips-hover</i>
+
+					</div>
+					<h2>icon-zips-hover</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Thu, 12 Jan 2017 00:28:34 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

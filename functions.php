@@ -52,9 +52,6 @@ require_once(get_template_directory().'/assets/functions/acf-custom-wysiwyg-css.
 // Adds ACF Options function
 require_once(get_template_directory().'/assets/functions/acf-options.php');
 
-// Adds ACF activation license for use with Migrate DB Pro plugin
-require_once(get_template_directory().'/assets/functions/acf-activate.php');
-
 // Adds Additonal image sizes to WP media settings page
 require_once(get_template_directory().'/assets/functions/image-sizes.php');
 

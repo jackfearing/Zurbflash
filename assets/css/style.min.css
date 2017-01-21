@@ -7101,7 +7101,6 @@ ul.slides {
     margin-right: auto;
     max-width: 100%; }
     .row.full-width .standard-width {
-      background: purple;
       max-width: 75rem;
       margin-left: auto;
       margin-right: auto; }
@@ -11032,9 +11031,6 @@ figure.effect-bubba:hover p {
 /*-------------------------------------------------------------------------------------------*/
 /* MISC */
 /*-------------------------------------------------------------------------------------------*/
-.column, .columns {
-  background: pink; }
-
 /******************************************************************
 
 Stylesheet: Retina Screens & Devices Stylesheet

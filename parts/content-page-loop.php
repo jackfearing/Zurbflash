@@ -70,6 +70,8 @@
 		/*-------------------------------------------------------------------------------------------*/
 		?>
 
+
+
 			<?php // Module: Section
 				include(locate_template('parts/content-component-loop.php'));
 			?>

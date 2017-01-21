@@ -1,3 +1,28 @@
+/*
+(function(){
+
+  var parallax = document.querySelectorAll(".parallax"),
+      speed = 0.5;
+
+  window.onscroll = function(){
+    [].slice.call(parallax).forEach(function(el,i){
+
+      var windowYOffset = window.pageYOffset,
+         elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+
+      el.style.backgroundPosition = elBackgrounPos;
+
+    });
+  };
+
+})();
+*/
+
+
+
+
+
+
 // Custom hamburger menu for off-canvas menu
 var $hamburger = $(".hamburger, .js-off-canvas-exit");
 $hamburger.on("click", function(e) {

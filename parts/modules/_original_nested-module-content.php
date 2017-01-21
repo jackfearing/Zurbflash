@@ -1,63 +1,4 @@
 <?php
-	$parallax_id_name = 'nested-mod-of-'.$i.'-'.$outerCounter;
-?>
-
-<style>
-
-
-/* background setup */
-.background {
-	background-size: cover;
-    background-repeat:no-repeat;
-    /* custom background-position */
-    background-position:50% 50%;
-/*     background-position:center bottom !important; */
-    /* ie8- graceful degradation */
-    background-position:50% 50%\9 !important;
-}
-
-/* fullscreen setup */
-html, body {
-    /* give this to all tags from html to .fullscreen */
-/*     height:100%; */
-}
-.fullscreen,
-.content-a {
-    width:100%;
-    height:100%;
-    overflow:hidden;
-}
-.fullscreen.overflow,
-.fullscreen.overflow .content-a {
-    height:auto;
-    min-height:100%;
-}
-
-/* content centering styles */
-.content-a {
-    display:table;
-}
-.content-b {
-	display:table-cell;
-    position:relative;
-	vertical-align:middle;
-	text-align:center;
-}
-
-
-.not-fullscreen {
-    height:50%;
-}
-</style>
-
-
-<?php echo $parallax_id_name;?>
-
-
-
-
-
-<?php
 /*
 //////////////////////////////////
 NESTED MODULE 01
@@ -104,12 +45,6 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 		$contentColBG 						= "background-size: cover; background-repeat: no-repeat;";
 		$dataEqualizer 						= 'data-equalizer data-equalize-on="medium" data-equalize-on-stack="true"';
 
-		$attachment_id_parallax 			= get_sub_field('parallax_image_background');
-		$image_thumbnail_parallax 			= wp_get_attachment_image_src( $attachment_id_parallax, "large-desktop" );
-		$image_medium_parallax 				= wp_get_attachment_image_src( $attachment_id_parallax, "large-desktop" );
-		$image_large_parallax 				= wp_get_attachment_image_src( $attachment_id_parallax, "large-desktop" );
-		$image_retina_parallax 				= wp_get_attachment_image_src( $attachment_id_parallax, "retina-large" );
-		$alt_parallax 						= get_post_meta($attachment_id_parallax , '_wp_attachment_image_alt', true);
 
 		$attachment_id_left 				= get_sub_field('column_left_image');
 		$image_thumbnail_left 				= wp_get_attachment_image_src( $attachment_id_left, "mobile-small" );
@@ -355,11 +290,6 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 
 
 
-<h1>PARALLAX</h1>
-
-<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
-    <div class="content-a">
-        <div class="content-b">
 
 			<div class="row table-overlay <?php echo $contentWidth; ?> <?php echo $contentRows; ?>" <?php echo $dataEqualizer; ?>>
 
@@ -386,6 +316,7 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 						<div data-equalizer-watch>
 					<?php endif;?>
 
+
 					<table id="<?php echo $module_id_name ;?>"
 						<?php if (get_sub_field('add_column_left_background') == 'yes') : // Radio Button Values ?>
 							class="image-bg-left image-content-left"
@@ -403,7 +334,6 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 						</tr>
 					</table>
 
-
 					<?php if (get_sub_field('add_link_component_left') == 'yes') : ?>
 						<?php echo '</a>'; ?>
 						<?php else :?>
@@ -413,20 +343,12 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 				</div> <!-- end .columns (Left Column) -->
 
 			</div> <!-- end .row -->
-        </div> <!-- end .content-b -->
-    </div> <!-- end .content-a -->
-</div> <!-- end .parallax -->
 
 
 
 
 
 		<?php elseif (get_sub_field('content_component_width') == '1/2') : // Radio Button Values?>
-
-
-<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
-    <div class="content-a">
-        <div class="content-b">
 
 			<div class="row table-overlay <?php echo $contentWidth; ?> <?php echo $contentRows; ?>" <?php echo $dataEqualizer; ?>>
 
@@ -526,10 +448,8 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 					<?php endif;?>
 
 				</div> <!-- end .columns (Right Column) -->
+
 				</div> <!-- end .row -->
-        </div> <!-- end .content-b -->
-    </div> <!-- end .content-a -->
-</div> <!-- end .parallax -->
 
 
 

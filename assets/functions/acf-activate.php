@@ -1,24 +1,19 @@
 <?php
-class AutoActivator {
+// Set ACF 5 license key on theme activation. Stick in your functions.php or equivalent.
+function auto_set_license_keys() {
 
-		const ACTIVATION_KEY = 'b3JkZXJfaWQ9MzMwOTB8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTA3IDE3OjMwOjE2';
+  if ( ! get_option( 'acf_pro_license' ) && defined( 'ACF_5_KEY' ) ) {
 
-		/**
-		 * AutoActivator constructor.
-		 * This will update the license field option on acf
-		 * Works only on backend to not attack performance on frontend
-		 */
-		public function __construct() {
-			if (
-				function_exists( 'acf' ) &&
-			    is_admin() &&
-				!acf_pro_get_license_key()
-			) {
-				acf_pro_update_license(self::ACTIVATION_KEY);
-			}
-		}
+    $save = array(
+		'key'	=> ACF_5_KEY,
+		'url'	=> home_url()
+	);
 
-	}
+	$save = maybe_serialize($save);
+	$save = base64_encode($save);
 
-       new AutoActivator();
+    update_option( 'acf_pro_license', $save );
+  }
+}
+add_action( 'after_switch_theme', 'auto_set_license_keys' );
 ?>

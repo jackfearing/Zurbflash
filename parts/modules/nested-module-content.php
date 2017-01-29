@@ -1,6 +1,4 @@
-<?php
-	$parallax_id_name = 'nested-mod-of-'.$i.'-'.$outerCounter;
-?>
+
 
 <style>
 
@@ -51,8 +49,6 @@ html, body {
 </style>
 
 
-<?php echo $parallax_id_name;?>
-
 
 
 
@@ -101,6 +97,10 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 		$content_height_medium 				= get_sub_field('column_content_height_medium');
 		$content_height_small 				= get_sub_field('column_content_height_small');
 
+		$parallax_height_large 				= get_sub_field('parallax_content_height_large');
+		$parallax_height_medium 			= get_sub_field('parallax_content_height_medium');
+		$parallax_height_small 				= get_sub_field('parallax_content_height_small');
+
 		$contentColBG 						= "background-size: cover; background-repeat: no-repeat;";
 		$dataEqualizer 						= 'data-equalizer data-equalize-on="medium" data-equalize-on-stack="true"';
 
@@ -143,11 +143,14 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 
 
 
+
+
 	<?php if( get_row_layout() == 'content_component' ): // nested layout: ?>
 
 
 			  <?php
 	              //New class names. this will only populate IF its a content component.
+	              $parallax_id_name 			= 'nested-parallax-of-'.$i.'-'.$outerCounter;
 	              $module_id_name  				= 'nested-mod-of-'.$i.'-'.$outerCounter;
 	              $module_image_right 			= 'nested-image-of-'.$i.'-'.$outerCounter;
 	              //$wow_animation_effect_custom = get_sub_field('animation_effect');
@@ -172,6 +175,11 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
                       height: <?php echo $content_height_large;?>px;
                       min-height: 100%;
                   }
+                  #<?php echo $parallax_id_name ;?> {
+						height: <?php echo $parallax_height_large;?>px;
+						/*min-height: 100%; */
+						min-height: <?php echo $content_height_large;?>px;
+                  }
               }
               /* Medium only */
                   @media screen and (min-width: 40em) and (max-width: 63.9375em) {
@@ -179,12 +187,22 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
                       height: <?php echo $content_height_medium;?>px !important;
                       min-height: 100%;
                   }
+                  #<?php echo $parallax_id_name ;?> {
+						height: <?php echo $parallax_height_medium;?>px;
+						/*min-height: 100%; */
+						min-height: <?php echo $content_height_medium;?>px;
+                  }
               }
               /* Small only */
               @media screen and (max-width: 39.9375em) {
                   #<?php echo $module_id_name ;?> {
                       height: <?php echo $content_height_small;?>px !important;
                       min-height: 100%;
+                  }
+                  #<?php echo $parallax_id_name ;?> {
+						height: <?php echo $parallax_height_small;?>px;
+						/*min-height: 100%; */
+						min-height: <?php echo $content_height_msmall;?>px;
                   }
                   .<?php echo $module_image_right ;?> {
 	                  height: <?php echo $image_thumbnail_right[2];?>px;
@@ -348,6 +366,7 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
               </style>
 
 
+<!-- <h2>Parallax ID Name: <strong><?php echo $parallax_id_name;?></strong></h2> -->
 
 
 		<?php if (get_sub_field('content_component_width') == '1/1') : // Radio Button Values ?>
@@ -355,11 +374,10 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 
 
 
-<h1>PARALLAX</h1>
 
 <?php if (get_sub_field( 'add_parallax_background' )): ?>
 	<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
-	    <div class="content-a">
+	    <div id="<?php echo $parallax_id_name;?>" class="content-a">
 	        <div class="content-b">
 <?php else: ?>
 <?php endif; ?>
@@ -433,7 +451,7 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 
 <?php if (get_sub_field( 'add_parallax_background' )): ?>
 	<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
-	    <div class="content-a">
+	    <div id="<?php echo $parallax_id_name;?>" class="content-a">
 	        <div class="content-b">
 <?php else: ?>
 <?php endif; ?>
@@ -550,6 +568,13 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 
 		<?php elseif (get_sub_field('content_component_width') == '2/3') : // Radio Button Values?>
 
+<?php if (get_sub_field( 'add_parallax_background' )): ?>
+	<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
+	    <div id="<?php echo $parallax_id_name;?>" class="content-a">
+	        <div class="content-b">
+<?php else: ?>
+<?php endif; ?>
+
 			<div class="row table-overlay <?php echo $contentWidth; ?> <?php echo $contentRows; ?>" <?php echo $dataEqualizer; ?>>
 
 				<div class="medium-8 columns overlay-wrapper <?php echo $addAnimationLeftColumn;?>"
@@ -651,11 +676,24 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 
 				</div> <!-- end .row -->
 
+<?php if (get_sub_field( 'add_parallax_background' )): ?>
+	        </div> <!-- end .content-b -->
+	    </div> <!-- end .content-a -->
+	</div> <!-- end .parallax -->
+<?php else: ?>
+<?php endif; ?>
+
 
 
 			<?php elseif (get_sub_field('content_component_width') == '3/2') : // Radio Button Values?>
 
 
+<?php if (get_sub_field( 'add_parallax_background' )): ?>
+	<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
+	    <div id="<?php echo $parallax_id_name;?>" class="content-a">
+	        <div class="content-b">
+<?php else: ?>
+<?php endif; ?>
 
 			<div class="row table-overlay <?php echo $contentWidth; ?> <?php echo $contentRows; ?>" <?php echo $dataEqualizer; ?>>
 
@@ -758,9 +796,23 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 
 				</div> <!-- end .row -->
 
+<?php if (get_sub_field( 'add_parallax_background' )): ?>
+	        </div> <!-- end .content-b -->
+	    </div> <!-- end .content-a -->
+	</div> <!-- end .parallax -->
+<?php else: ?>
+<?php endif; ?>
+
 
 
 		<?php elseif (get_sub_field('content_component_width') == '1/3') : // Radio Button Values?>
+
+<?php if (get_sub_field( 'add_parallax_background' )): ?>
+	<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
+	    <div id="<?php echo $parallax_id_name;?>" class="content-a">
+	        <div class="content-b">
+<?php else: ?>
+<?php endif; ?>
 
 			<div class="row table-overlay <?php echo $contentWidth; ?> <?php echo $contentRows; ?>" <?php echo $dataEqualizer; ?>>
 
@@ -911,6 +963,17 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 				</div> <!-- end .columns (Right Column) -->
 
 				</div> <!-- end .row -->
+
+
+<?php if (get_sub_field( 'add_parallax_background' )): ?>
+	        </div> <!-- end .content-b -->
+	    </div> <!-- end .content-a -->
+	</div> <!-- end .parallax -->
+<?php else: ?>
+<?php endif; ?>
+
+
+
 
 		<?php endif; ?>
 

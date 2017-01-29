@@ -357,9 +357,13 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 
 <h1>PARALLAX</h1>
 
-<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
-    <div class="content-a">
-        <div class="content-b">
+<?php if (get_sub_field( 'add_parallax_background' )): ?>
+	<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
+	    <div class="content-a">
+	        <div class="content-b">
+<?php else: ?>
+<?php endif; ?>
+
 
 			<div class="row table-overlay <?php echo $contentWidth; ?> <?php echo $contentRows; ?>" <?php echo $dataEqualizer; ?>>
 
@@ -413,10 +417,13 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 				</div> <!-- end .columns (Left Column) -->
 
 			</div> <!-- end .row -->
-        </div> <!-- end .content-b -->
-    </div> <!-- end .content-a -->
-</div> <!-- end .parallax -->
 
+<?php if (get_sub_field( 'add_parallax_background' )): ?>
+	        </div> <!-- end .content-b -->
+	    </div> <!-- end .content-a -->
+	</div> <!-- end .parallax -->
+<?php else: ?>
+<?php endif; ?>
 
 
 
@@ -424,9 +431,12 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 		<?php elseif (get_sub_field('content_component_width') == '1/2') : // Radio Button Values?>
 
 
-<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
-    <div class="content-a">
-        <div class="content-b">
+<?php if (get_sub_field( 'add_parallax_background' )): ?>
+	<div class="row full-width parallax background" <?php echo 'data-interchange=" ['.$image_thumbnail_parallax[0].', only screen and (min-width: 1px)] alt='.$alt_parallax.' width='.$image_thumbnail_parallax[1].' height='.$image_thumbnail_parallax[2].', ['.$image_large_parallax[0].', only screen and (min-width: 40em)] alt='.$alt_parallax.' width='.$image_large_parallax[1].' height='.$image_large_parallax[2].', ['.$image_retina_parallax[0].', only screen and (min-width: 64em)] alt='.$alt_parallax.' width='.$image_retina_parallax[1].' height='.$image_retina_parallax[2].'"' ;?> data-diff="200" data-img-width="<?php echo $image_retina_parallax[1];?>" data-img-height="<?php echo $image_retina_parallax[2];?>">
+	    <div class="content-a">
+	        <div class="content-b">
+<?php else: ?>
+<?php endif; ?>
 
 			<div class="row table-overlay <?php echo $contentWidth; ?> <?php echo $contentRows; ?>" <?php echo $dataEqualizer; ?>>
 
@@ -526,10 +536,15 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 					<?php endif;?>
 
 				</div> <!-- end .columns (Right Column) -->
-				</div> <!-- end .row -->
-        </div> <!-- end .content-b -->
-    </div> <!-- end .content-a -->
-</div> <!-- end .parallax -->
+
+			</div> <!-- end .row -->
+
+<?php if (get_sub_field( 'add_parallax_background' )): ?>
+	        </div> <!-- end .content-b -->
+	    </div> <!-- end .content-a -->
+	</div> <!-- end .parallax -->
+<?php else: ?>
+<?php endif; ?>
 
 
 

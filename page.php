@@ -2,6 +2,50 @@
 
 <h2>Page Template Code:</h2>
 
+<div class="card" style="width: 300px;">
+  <div class="card-divider">
+    This is a header
+  </div>
+  <img src="https://placeimg.com/640/480/nature" />
+  <div class="card-section">
+    <h4>This is a card.</h4>
+    <p>It has an easy to override visual style, and is appropriately subdued.</p>
+  </div>
+</div>
+
+
+<!-- Change the accordian to tabs or tabs to accordian -->
+<ul class="accordion" data-responsive-accordion-tabs="accordion medium-accordion large-tabs">
+  <li class="accordion-item is-active" data-accordion-item>
+    <a href="#" class="accordion-title">Accordion 1</a>
+    <div class="accordion-content" data-tab-content>
+      I would start in the open state, due to using the `is-active` state class.
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title">Accordion 2</a>
+    <div class="accordion-content" data-tab-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus doloremque, beatae impedit autem, atque excepturi? Illo tempore, nulla sint, quam accusamus itaque laudantium, totam accusantium modi officiis, unde nostrum dignissimos.
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title">Accordion 3</a>
+    <div class="accordion-content" data-tab-content>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus doloremque, beatae impedit autem, atque excepturi? Illo tempore, nulla sint, quam accusamus itaque laudantium, totam accusantium modi officiis, unde nostrum dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, rem aut iusto sunt voluptatem veniam, placeat magnam et alias rerum praesentium dicta voluptate, veritatis provident odit sapiente inventore cumque Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium nulla ratione perferendis, quibusdam nisi asperiores ducimus, labore qui hic praesentium, necessitatibus aspernatur placeat. Sint, deserunt, consequatur tenetur praesentium nostrum quaerat.
+    </div>
+  </li>
+
+</ul>
+
+
+
+
+
+
+
+
+
+
 <?php
 if (is_page_template('default'))  {
     echo 'show some content when you ARE in template-custom.php OR template-custom2.php';

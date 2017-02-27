@@ -42,7 +42,6 @@
 	<body <?php body_class(); ?>>
 		<div class="off-canvas-wrapper scene-element scene-element–fadeIn">
 
-			<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
 				<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
 
@@ -53,6 +52,7 @@
 						 <!-- This navs will be applied to the topbar, above all content
 							  To see additional nav styles, visit the /parts directory -->
 						<?php get_template_part( 'parts/nav', 'offcanvas-topbar-custom' ); ?>
+						<?php //get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
 
 						<?php //if(!is_page( 'modules' )):?>
 							<?php //get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>

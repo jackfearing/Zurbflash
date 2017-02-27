@@ -244,6 +244,7 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
               #<?php echo $module_id_name ;?>.image-content-left td h4 span,
               #<?php echo $module_id_name ;?>.image-content-left td h5 span {
 	              <?php if ($image_content_color_left) :?>
+		             /* Color added via ACF fields backend */
 	              	color: <?php echo $image_content_color_left;?> !important;
 	              <?php else :?>
 	              <?php endif;?>

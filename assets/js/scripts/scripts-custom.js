@@ -24,7 +24,7 @@
 
 
 // Custom hamburger menu for off-canvas menu
-var $hamburger = $(".hamburger, .js-off-canvas-exit");
+var $hamburger = $(".hamburger, .js-off-canvas-overlay");
 $hamburger.on("click", function(e) {
 	$hamburger.toggleClass("is-active");
 	// Do something else, like open/close menu

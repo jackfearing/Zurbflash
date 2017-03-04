@@ -1,4 +1,5 @@
 
+
 #main {
   	// Paragraphs
 	p {
@@ -306,6 +307,14 @@ body.page-template-tpl-modules-sidebar-single {
 	display: block;
 	animation: fadeIn .4s;
 	opacity: 1;
+}
+
+// Style Foundation 6 Responsive Tabs to Accordion Links
+li.is-active a.accordion-title,
+.accordion-title:hover,
+.tabs-title > a[aria-selected='true'],
+.tabs-title > a:hover {
+	background: #e6e6e6;
 }
 
 

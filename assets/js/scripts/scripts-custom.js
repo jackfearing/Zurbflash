@@ -19,7 +19,27 @@
 */
 
 
+/*
+$('.accordion').prop('data-allow-all-closed','true');
+$('.accordion').prop('data-multi-expand','true');
+*/
 
+/*
+$("ul.accordion").attr('data-allow-all-closed', true);
+$("ul.accordion").attr('data-multi-expand', true);
+*/
+
+
+$('.tabs > li:first-of-type').addClass('is-active');
+$('.tabs > li:first-of-type a').attr('aria-selected','true');
+$('.tabs-content div:first-of-type').addClass('is-active');
+$('.tabs-content div:first-of-type').attr('aria-hidden','false');
+
+
+$('.accordion > li:first-of-type').addClass('is-active');
+$('.accordion > li:first-of-type a').attr('aria-selected','true');
+$('.accordion-content div:first-of-type').addClass('is-active');
+$('.accordion-content div:first-of-type').attr('aria-hidden','false');
 
 
 

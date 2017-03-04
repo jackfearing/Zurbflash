@@ -7591,6 +7591,12 @@ body.page-template-tpl-modules-sidebar-single .row.standard-width {
   animation: fadeIn .4s;
   opacity: 1; }
 
+li.is-active a.accordion-title,
+.accordion-title:hover,
+.tabs-title > a[aria-selected='true'],
+.tabs-title > a:hover {
+  background: #e6e6e6; }
+
 /* !Foundation -  Style reveal modal box
 	 Don't forget to add the .video class to the code for style to work
 ===============================================================================*/

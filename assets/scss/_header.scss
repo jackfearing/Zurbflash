@@ -6,6 +6,10 @@ $headerHeightLarge: 500px;
 $headerHeightMedium: calc(#{$headerHeightLarge} / 2);
 $headerHeightSmall: calc(#{$headerHeightLarge} / 3);
 
+header {
+	margin-bottom: 1rem;
+}
+
 .header-category-container {
 	//min-height: 300px;
 	width: auto;

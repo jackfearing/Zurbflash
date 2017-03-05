@@ -1,6 +1,6 @@
 .top-bar-right .menu a {
 	color: blue;
-	    height: 34px;
+    height: 34px;
     line-height: 33px;
     padding: 0;
     padding-right: 30px;
@@ -17,7 +17,6 @@
     position: absolute;
     top: 1px;
     width: 20px;
-
 }
 
 
@@ -775,7 +774,7 @@
 
 .nav-container {
 	height: $nav-height;
-	margin-bottom: $nav-spacing;
+	//margin-bottom: $nav-spacing;
 	&.center {
 		.nav-table {
 			.nav-custom {

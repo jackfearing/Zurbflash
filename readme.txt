@@ -1,7 +1,4 @@
-Find out more here: www.jointswp.com
-Demo: www.jointswp.com/demo
-
-Currently using Foundation 6.3.
+Currently using Foundation 6.3
 
 ### What is JointsWP?
 JointsWP is a blank WordPress theme built with Foundation 6, giving you all the power and flexibility you need to build complex, mobile friendly websites without having to start from scratch.
@@ -25,6 +22,20 @@ You can use whatever you want – seriously. While the Sass version comes with B
 - Install [node.js](https://nodejs.org).
 - Using the command line, navigate to your theme directory
 - Run npm install
+- Check  Node version: node -v
+
+- Install SASS
+- In your command-line application type: sudo gem install sass
+
+- Install GULP globally
+- In your command-line application, type: sudo npm install gulp -g gulp
 - Run gulp to confirm everything is working
 
-[Read more about how Gulp is used with JointsWP.](http://jointswp.com/docs/gulp/)
+
+
+### Run scripts to update the following plugins:
+First install gulp for the in the project folder:
+sudo npm install gulp --save-dev
+
+### New Gulp File: (Joints 5.0)
+sudo npm install del gulp-util gulp-sass gulp-autoprefixer gulp-bower gulp-jshint jshint-stylish gulp-uglify gulp-concat gulp-cssnano gulp-rename gulp-plumber gulp-imagemin gulp-notify gulp-sourcemaps imagemin-pngquant jshint gulp-cache gulp-newer browser-sync svg-sprite gulp-svg-sprite gulp-watch gulp-babel babel-preset-es2015  --save-dev

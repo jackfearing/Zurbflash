@@ -82,8 +82,25 @@
 -->
 
 
+ <!--
+	 Change hamurger animation
+	 https://github.com/jonsuh/hamburgers
 
-<button data-toggle="off-canvas" class="hamburger hamburger--spin" type="button">
+	 - hamburger--emphatic
+	 - hamburger--emphatic-r
+	 - hamburger--spin
+	 - hamburger--slider
+	 - hamburger--squeeze
+	 - hamburger--vortex
+	 - hamburger--collapse
+	 - hamburger--arrow
+	 - hamburger--arrow-r
+	 - hamburger--arrowalt
+	 - hamburger--arrowalt-r
+
+ -->
+
+<button data-toggle="off-canvas" class="hamburger hamburger--emphatic" type="button">
   <span class="hamburger-box">
     <span class="hamburger-inner"></span>
   </span>
@@ -126,6 +143,5 @@
 
 	</div> <!-- end .top-bar -->
 </div> <!-- end .nav-container -->
-
 
 

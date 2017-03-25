@@ -36,7 +36,7 @@ gulp.task('styles', function() {
         }))
         .pipe(gulp.dest('./assets/css/'))
         .pipe(rename({suffix: '.min'}))
-        //.pipe(cssnano()) // Uncomment for production release
+        .pipe(cssnano()) // Uncomment for production release
         .pipe(sourcemaps.write('.')) // Creates sourcemaps for minified styles
         .pipe(gulp.dest('./assets/css/'))
 		.pipe(notify({ message: 'Styles task complete'}))

@@ -948,19 +948,17 @@ add_filter('tiny_mce_before_init', 'my_mce4_options');
 	}
 	add_action('template_include', 'define_current_theme_file', 1000);
 
-	// !Remove query strings
-	function jw_remove_script_version( $src ){
-	 return remove_query_arg( 'ver', $src );
-	}
-	add_filter( 'script_loader_src', 'jw_remove_script_version' );
-	add_filter( 'style_loader_src', 'jw_remove_script_version' );
 
 
 	// Emoji detection script.
 	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 
+
+
 	// Emoji styles.
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+
 
 	// Add custom text below wp-login logo
 	function wps_login_message( $message ) {
@@ -971,6 +969,8 @@ add_filter('tiny_mce_before_init', 'my_mce4_options');
 	    }
 	}
 	add_filter( 'login_message', 'wps_login_message' );
+
+
 
 	// Change wp-login text for wordpress lables
 	global $pagenow;

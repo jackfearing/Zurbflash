@@ -777,6 +777,7 @@
 	//margin-bottom: $nav-spacing;
 	&.center {
 		.nav-table {
+			height: $nav-height;
 			.nav-custom {
 				float: none;
 				max-width: 75rem;

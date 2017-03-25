@@ -1,5 +1,67 @@
 <?php get_header(); ?>
 
+
+
+
+
+
+
+
+<div class="large-12 columns">
+
+	<div class="row componentGallery small-up-1 medium-up-2 large-up-2">
+
+		<span class="tint gallery-item-link" >
+
+			<div class="gallery-section" data-equalizer-watch="">
+
+				<div class="headline-container"><h4>headline</h4><p>Sub Headline</p></div>
+
+					<figure class="effect-lily post-image-container" style="height: 450px;">
+
+						<img class="post-featured-image" data-interchange=" [//localhost:3000/wp-content/uploads/2016/09/Worker-01-635x480.jpg, only screen and (min-width: 1px)] alt='' width='635' height='480', [//localhost:3000/wp-content/uploads/2016/09/Worker-01-635x480.jpg, only screen and (min-width: 641px)] alt='' width='635' height='480', [//localhost:3000/wp-content/uploads/2016/09/Worker-01-635x480.jpg, only screen and (min-width: 961px)] alt='' width='635' height='480'" src="//localhost:3000/wp-content/uploads/2016/09/Worker-01-635x480.jpg">
+
+						<figcaption>
+
+							<div class="caption-table">
+							<div class="caption-row">
+							<div class="caption-cell">
+
+								<h3>Component Title</h3>
+								<p>Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Cum sociis natoque penatibus et magnis dis parturient montes,</p>
+
+							</div> <!-- end .caption-cell -->
+							</div> <!-- end .caption-row -->
+							</div> <!-- end .caption-table -->
+
+						</figcaption>
+
+					</figure>
+
+			</div> <!-- end .gallery-section -->
+
+		</span> <!-- end tint -->
+
+	</div> <!-- end .componentGallery -->
+
+</div>  <!-- end large-12 columns -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2>Page Template Code:</h2>
 
 <div class="card" style="width: 300px;">

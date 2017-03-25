@@ -242,8 +242,10 @@ $galleryJSCode : this is the JS code that is needed to activate and store the de
 
 
 						<?php $reveal2_content .= '</div><!-- end .reveal-content -->'; ?>
+ <!-- _Old Close Button using commented out code in the _overrides.scss -->
+<!--?php $reveal2_content .= '<button class="close-button fixed" aria-label="Close alert" type="button" data-close><span aria-hidden="true">&times;</span></button>';?-->
 
-						<?php $reveal2_content .= '<button class="close-button fixed" aria-label="Close alert" type="button" data-close><span aria-hidden="true">&times;</span></button>';?>
+						<?php $reveal2_content .= '<button class="close-button fixed" aria-label="Close alert" type="button" data-close><span aria-hidden="true"></span></button>';?>
 
 						<?php $reveal2_content .= '</div> <!-- end .reveal -->';
 					?>

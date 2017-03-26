@@ -41,7 +41,7 @@
 			    [<?php echo $image_thumbnail_sb[0]; ?>, only screen and (min-width: 1px)] alt='<?php echo $alt_sb; ?>' width='<?php echo $image_thumbnail_sb[1]; ?>' height='<?php echo $image_thumbnail_sb[2]; ?>',
 			    [<?php echo $image_medium_sb[0]; ?>, only screen and (min-width: 641px)] alt='<?php echo $alt_sb; ?>' width='<?php echo $image_medium_sb[1]; ?>' height='<?php echo $image_medium_sb[2]; ?>',
 			    [<?php echo $image_large_sb[0]; ?>, only screen and (min-width: 929px)] alt='<?php echo $alt_sb; ?>' width='<?php echo $image_large_sb[1]; ?>' height='<?php echo $image_large_sb[2]; ?>'"
-				src="<?php echo $image_thumbnail_sb[0]?>"
+				src="<?php echo $image_thumbnail_sb[0]?>" alt='<?php echo $alt_sb; ?>' width='<?php echo $image_large_sb[1]; ?>' height='<?php echo $image_large_sb[2]; ?>'
 			/>
 
 		<?php else :?>

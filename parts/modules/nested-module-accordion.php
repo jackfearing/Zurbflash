@@ -9,7 +9,10 @@
 
 	<?php
 		$accordionWidth 	= get_sub_field('accordion_width');
-		$accordionRows 	= get_sub_field('accordion_rows');
+		$accordionRows 		= get_sub_field('accordion_rows');
+		$accordionLarge 	= get_sub_field('accordion_large_display');
+		$accordionMedium 	= get_sub_field('accordion_medium_display');
+		$accordionSmall 	= get_sub_field('accordion_small_display');
 	?>
 
 
@@ -24,7 +27,7 @@
 		?>
 
 		<!-- Change the accordian to tabs or tabs to accordian -->
-		<ul class="accordion" data-responsive-accordion-tabs="accordion medium-accordion large-tabs">
+		<ul class="accordion" data-responsive-accordion-tabs="small-<?php echo $accordionSmall;?> medium-<?php echo $accordionMedium;?> large-<?php echo $accordionLarge;?>">
 
 			<?php
 				$i=0;

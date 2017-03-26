@@ -330,7 +330,7 @@ li.is-active a.accordion-title,
 	overflow-y: hidden; // Causes issues if content is longer then page
 	.reveal {
 		min-height: 20%;
-		max-height: 85% !important;
+		max-height: 90% !important;
 		z-index: auto;
 		top: 80px !important;
 		//overflow-y: scroll;

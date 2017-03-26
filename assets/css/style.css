@@ -4720,6 +4720,15 @@ body {
   overflow-y: scroll;
   color: #000; }
 
+body::-webkit-scrollbar {
+  width: 1em; }
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+
+body::-webkit-scrollbar-thumb {
+  background-color: red; }
+
 a {
   outline: 0; }
 
@@ -6229,6 +6238,7 @@ table {
       width: 100%; }
     .nav-container .nav-table .nav-cell {
       display: table-cell;
+      width: 70px;
       vertical-align: middle; }
       .nav-container .nav-table .nav-cell > ul {
         display: inline-block;
@@ -6994,13 +7004,13 @@ a.button {
     height: 30px;
     margin-right: 6px; }
   a.button:hover {
-    background-color: #CB0606; }
+    background-color: #23282D; }
     a.button:hover[href$=".pdf"]:before {
       content: "";
       display: inline-block;
       vertical-align: middle;
       line-height: normal;
-      background: url("../svg/zips.svg") no-repeat;
+      background: url("../svg/pdfs.svg") no-repeat;
       background-size: contain;
       width: 30px;
       height: 30px;
@@ -7009,9 +7019,6 @@ a.button {
 /*-------------------------------------------------------------------------------------------*/
 /* HEADER: CATEGORY ARCHIVES */
 /*-------------------------------------------------------------------------------------------*/
-header {
-  margin-bottom: 1rem; }
-
 .header-category-container {
   width: auto;
   background-repeat: no-repeat;
@@ -7608,7 +7615,7 @@ li.is-active a.accordion-title,
   overflow-y: hidden; }
   .reveal-overlay .reveal {
     min-height: 20%;
-    max-height: 85% !important;
+    max-height: 90% !important;
     z-index: auto;
     top: 80px !important; }
 

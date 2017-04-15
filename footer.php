@@ -1,3 +1,5 @@
+<a href="#" class="back-to-top">Back to Top</a>
+
 					<footer class="footer" role="contentinfo">
 						<div id="inner-footer">
 

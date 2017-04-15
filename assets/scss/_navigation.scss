@@ -21,15 +21,26 @@
 
 
 
+// Using Jquery To Add A Dynamic “Back To Top” Floating Button With Smooth Scroll
+a.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-family: $font-stack-bold;
+    background-color: blue;
+    font-size: 1em;
+    padding: 1em;
+    display: none;
+    transition: background-color 200ms ease-in-out;
+}
 
-
-
-
-
-
-
-
-
+a.back-to-top:hover {
+    background-color: red;
+    color: white;
+}
 
 
 
